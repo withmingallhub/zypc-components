@@ -1,4 +1,4 @@
-# zypc/vue-ui
+# zypc-components
 
 > A Vue.js project
 
