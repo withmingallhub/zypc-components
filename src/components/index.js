@@ -1,8 +1,10 @@
 import Input from './Input/input.vue'
+import Button from './Button/button.vue'
 
 const components = {
    install(Vue){
        Vue.component('zypcInput',Input) //name名很重要，最后引用的组件名
+       Vue.component('zypcButton',Button)
    } 
 }
 

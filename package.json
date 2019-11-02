@@ -1,11 +1,11 @@
 {
-  "name": "zypc-components",
+  "name": "@zypc/vue-ui",
   "version": "1.0.1",
   "description": "A Vue.js project",
   "author": "withmingallhub <40680331+withmingallhub@users.noreply.github.com>",
   "licentse": "MIT",
   "private": false,
-  "main": "dist/zypc-components.min.js",
+  "main": "dist/@zypc/vue-ui.min.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:withmingallhub/zypc-components.git"
