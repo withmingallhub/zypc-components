@@ -29,8 +29,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // filename: utils.assetsPath('js/[name].[chunkhash].js'),
     // chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     publicPath:config.build.assetsPublicPath,
-    filename: '@zypc/vue-ui.min.js',
-    library:'@zypc/vue-ui',
+    filename: '@zypc/vue.min.js',
+    library:'@zypc/vue',
     libraryTarget:'umd',
     umdNamedDefine:true
   },
@@ -55,7 +55,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
       // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`, 
       // increasing file size: https://github.com/vuejs-templates/webpack/issues/1110
-      filename:'@zypc/vue-ui.min.css'
+      filename:'@zypc/vue.min.css'
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
