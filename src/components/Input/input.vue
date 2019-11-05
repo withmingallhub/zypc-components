@@ -7,6 +7,10 @@
         :value="value"
         @input="input"
         :placeholder="placeholder" 
+        v-on:change="inputChange"
+        v-on:focus="inputFocus"
+        v-on:blur="inputBlur"
+        :autofocus="autofocus"
         :style="{
             backgroundColor:backgroundColor,
             width:width,
@@ -23,9 +27,16 @@ export default {
             
         }
     },
-    props:["backgroundColor","placeholder","width","value"],
+    props:["backgroundColor","placeholder","width","value","focus"],
     mounted() {
 
+    },
+    computed: {
+        autofocus: function(){
+            console.log(this.focus,typeof this.focus)
+            if(this.focus !== undefined)
+                return 'autofocus'
+        }
     },
     methods: {
         // 获得焦点为input标签添加边框
@@ -36,9 +47,23 @@ export default {
         zypcBlurInput(){
             this.$refs.zypcInput.style.border = '1px solid rgb(150,150,150)'
         },
-        // 实现v-modle的功能
+        // 实现v-modle的功能和onchange
         input(){
+            // v-model功能
             this.$emit('input',event.target.value)
+            // onchange功能
+            this.$emit('onChange')
+        },
+        inputChange(){
+            this.$emit('change')
+        },
+        // 失去焦点时触发
+        inputBlur(){
+            this.$emit('onBlur')
+        },
+        //获得焦点时触发
+        inputFocus(){
+            this.$emit('onFocus')
         }
     },
 }
